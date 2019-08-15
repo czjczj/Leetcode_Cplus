@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include <stack>
+#include <algorithm>
 #include <vector>
+#include <cmath>
 using namespace std;
 int main(){
-    vector<int> a;
-    a.insert(a.begin(),1);
-    a.insert(a.begin(),2);
-    cout<<a[0];
+    int dp[2][4/2+1];
+    fill(dp[0], dp[0]+(2*(4/2+1)),5);
+    cout<<dp[1][2];
     return 0;
 }
