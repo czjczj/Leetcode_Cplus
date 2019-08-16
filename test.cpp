@@ -4,10 +4,23 @@
 #include <algorithm>
 #include <vector>
 #include <cmath>
+#include <set>
 using namespace std;
 int main(){
-    int dp[2][4/2+1];
-    fill(dp[0], dp[0]+(2*(4/2+1)),5);
-    cout<<dp[1][2];
+    set<string> temp1;
+    temp1.insert("520");
+    temp1.insert("521");
+    temp1.insert("522");
+    temp1.insert("523");
+    set<string> tmpS(temp1);
+    temp1.erase("521");
+    set<string>::iterator iter = tmpS.begin();
+    while (iter!=tmpS.end())
+    {
+
+        string a = *iter;
+        cout<<a<<endl;
+        iter++;
+    }
     return 0;
 }
