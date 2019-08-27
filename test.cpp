@@ -9,13 +9,13 @@
 #include <map>
 #include <iomanip>
 #include <string.h>
+#include <hash_map>
+#include <unordered_map>
 using namespace std;
 
 int main()
 {
-    int c, q=1;
-    while((c=getchar()) != EOF){
-        printf("%c",c);
-    }
+    string a = "1342432";
+    cout<<a.substr(1);
     return 0;
 }
