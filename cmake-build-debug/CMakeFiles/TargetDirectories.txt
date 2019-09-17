@@ -1,0 +1,4 @@
+/home/czj/Clion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/czj/Clion/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/czj/Clion/cmake-build-debug/CMakeFiles/test.dir
+/home/czj/Clion/cmake-build-debug/CMakeFiles/b.dir

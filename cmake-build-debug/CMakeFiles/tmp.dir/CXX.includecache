@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/czj/Clion/tmp.cpp
+iostream
+-
+fstream
+-
+string
+-
+stack
+-
+algorithm
+-
+vector
+-
+cmath
+-
+set
+-
+map
+-
+
