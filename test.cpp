@@ -1,13 +1,13 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <algorithm>
 using namespace std;
 
 int main() {
-    Solution s;
-    vector<int> v = {0,0};
-    int k = 0;
-    cout<<s.checkSubarraySum(v,k);
+    string a = "423";
+    cout<<char(a[2])<<endl;
+    cout<<('1'<'2')<<endl;
     return 0;
 }
 
