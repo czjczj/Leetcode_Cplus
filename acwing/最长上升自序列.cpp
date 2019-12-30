@@ -142,3 +142,66 @@ int main() {
 }
 
 
+#include <iostream>
+#include <algorithm>
+#include <bits/stdc++.h>
+#include <cstring>
+using namespace std;
+
+const int INF = INT32_MAX>>1;
+int n;
+int a[21][21];
+int dp[1<<20][21];
+int main(){
+    cin>>n;
+    for(int i=0; i<n; i++)
+        for(int j=0; j<n; j++){
+            int tmp;
+            cin>>tmp;
+            a[i][j] = tmp;
+            a[j][i] = tmp;
+        }
+
+    memset(dp, INF, sizeof(dp));
+
+    dp[1][0] = 0;
+
+    for(int i=0; i< 1<<n; i++){
+        for(int j=0; j<n; j++){
+            if(i>>j & 1 == 0) continue;
+            for(int k=0; k<n; k++){
+                if((i^(1<<j))>>k & 1 == 0) continue;
+                dp[i][j] = min(dp[i][j], dp[i^(1<<j)][k] + a[k][j]);
+            }
+        }
+    }
+
+    cout<<dp[(1<<n)-1][n-1];
+    return 0;
+}
+
+#include <bits/stdc++.h>
+using namespace std;
+int n,f[1<<20][21],i,j,k;
+int weight[21][21];
+int main()
+{
+    ios::sync_with_stdio(false);
+    memset(f,0x3f,sizeof(f));
+    cin>>n;
+    for (i=0; i<n; i++)
+        for (j=0; j<n; j++)
+            cin>>weight[i][j];
+    f[1][0]=0;
+    for (i=1; i<(1<<n); i++)
+        for (j=0; j<n; j++)
+            if ((i>>j & 1))
+                for (k=0; k<n; k++)
+                    if ((i^(1<<j)) >> k & 1)
+                        f[i][j]=min(f[i][j],f[i^(1<<j)][k]+weight[k][j]);
+    cout<<f[(1<<n)-1][n-1];
+    return 0;
+    vector<int> a;
+    a.push_back(1);
+    a.pop_back()
+}
